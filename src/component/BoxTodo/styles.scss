@@ -62,8 +62,12 @@
         .box-todo-top {
             .box-todo-left {
                 margin-left: 10px;
-                width: 160px;
+                width: 120px;
                 font-size: 14px;
+            }
+            .box-todo-right {
+                width: 60%;
+                @include flex-around;
             }
         }
     }
