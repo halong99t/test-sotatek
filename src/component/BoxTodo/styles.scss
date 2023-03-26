@@ -1,0 +1,70 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variable';
+
+.box-todo-container {
+    margin-top: 10px;
+    width: 100%;
+    @include flex-column;
+    .box-todo-top {
+        width: 75%;
+        height: 80px;
+        border: black 1px solid;
+        @include flex-align;
+        .box-todo-left {
+            margin-left: 100px;
+            width: 50%;
+            align-self: left;
+        }
+        .box-todo-right {
+            width: 300px;
+            @include flex-around;
+        }
+    }
+    .box-todo-bottom {
+        width: 75%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: none;
+        border-bottom: black 1px solid;
+        border-left: black 1px solid;
+        border-right: black 1px solid;
+        @include flex-center;
+        .box-todo-bottom-container {
+            width: 450px;
+        }
+    }
+}
+
+@media only screen and (max-width: $table) {
+    .box-todo-container {
+        width: 100%;
+        .box-todo-top {
+            width: 90%;
+            .box-todo-left {
+            }
+            .box-todo-right {
+                width: 50%;
+                @include flex-around;
+            }
+        }
+        .box-todo-bottom {
+            width: 90%;
+            @include flex-center;
+            .box-todo-bottom-container {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .box-todo-container {
+        .box-todo-top {
+            .box-todo-left {
+                margin-left: 10px;
+                width: 160px;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variable';
+
+.newtask-container {
+    width: 80%;
+    @include flex-column;
+
+    .newtask-title {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .newtask-box {
+        margin-top: 50px;
+    }
+}

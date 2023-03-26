@@ -1,0 +1,11 @@
+@import '../../styles/variable.scss';
+.select-container {
+    .select-title {
+        font-weight: $bold;
+    }
+    .select {
+        margin-top: 5px;
+        outline: none;
+        height: 35px;
+    }
+}

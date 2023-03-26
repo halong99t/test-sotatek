@@ -1,0 +1,19 @@
+@import '../../styles/variable.scss';
+
+.date-container {
+    .date-title {
+        font-weight: $bold;
+    }
+    .date-select {
+        margin-top: 5px;
+        outline: none;
+    }
+}
+
+@media only screen and (max-width: $table) {
+    .date-container {
+        .date-select {
+            width: 150px;
+        }
+    }
+}

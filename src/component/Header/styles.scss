@@ -1,0 +1,19 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/_variable.scss';
+.header {
+    @include flex-around;
+    .header-items {
+        background-color: $greenColor;
+        padding: 15px;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .header-open {
+        cursor: pointer;
+    }
+    .header-open {
+        align-self: center;
+    }
+}

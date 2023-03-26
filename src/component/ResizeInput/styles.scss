@@ -1,0 +1,23 @@
+@import '../../styles/variable.scss';
+
+.resize-text-container {
+    .resize-text-title {
+        font-weight: $bold;
+    }
+    .resize-text {
+        width: 450px;
+        min-height: 100px;
+        outline: none;
+        resize: vertical;
+        max-height: 300px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: $table) {
+    .resize-text-container {
+        .resize-text {
+            width: 300px;
+        }
+    }
+}

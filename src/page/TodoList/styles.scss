@@ -1,0 +1,59 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variable.scss';
+
+.todo-container {
+    margin-top: 30px;
+    width: 80%;
+    @include flex-column;
+
+    .todo-title {
+        font-size: 28px;
+        font-weight: bold;
+        @include flex-around;
+        width: 80%;
+    }
+    .todo-box {
+        @include flex-center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 120px;
+    }
+
+    .todo-bottom {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        @include flex-around;
+        align-items: center;
+        height: 100px;
+        background-color: $colorBottom;
+
+        .todo-bottom-title {
+            color: white;
+        }
+
+        .todo-bottom-actions {
+            width: 300px;
+            @include flex-between;
+        }
+    }
+}
+
+@media only screen and (max-width: $table) {
+    .todo-container {
+        width: 100%;
+        .todo-title {
+            @include flex-column;
+        }
+
+        .todo-bottom {
+            .todo-bottom-actions {
+                width: 220px;
+                @include flex-between;
+            }
+        }
+    }
+}
