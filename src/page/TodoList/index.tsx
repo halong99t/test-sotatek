@@ -23,7 +23,7 @@ function TodoList() {
     const getItem = () => {
         const dataTemp = getDataStorage() || []
         const arrTemp: TypeData[] = []
-        dataTemp.map((item: TypeData) => {
+        dataTemp.forEach((item: TypeData) => {
             if (item.check) {
                 arrTemp.push(item)
             }
@@ -127,7 +127,7 @@ function TodoList() {
     const handleRemove = () => {
         const data = getDataStorage()
         const arrTemp: TypeData[] = []
-        data.map((items: TypeData) => {
+        data.forEach((items: TypeData) => {
             if (items.check === false) {
                 arrTemp.push(items)
             }
